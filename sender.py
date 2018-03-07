@@ -57,4 +57,4 @@ class Sender(object):
             outputQueueName, event, send_confirmation_callback, send_context)
     
     def receive_message(self,message_callback,user_context):
-        self.client.set_message_callback(message_callback, user_context)
+        self.client.set_message_callback("input1",message_callback, user_context)
