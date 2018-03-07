@@ -29,4 +29,4 @@ def on_message_received(message):
     do_speech_synth( message.getString())
 
 
-    main()
+main()

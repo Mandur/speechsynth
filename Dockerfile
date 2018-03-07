@@ -9,4 +9,4 @@ RUN apt-get -y install alsa-utils
 RUN sudo pip3 install pyttsx3
 WORKDIR /azure-iot-sdk-python/device/samples
 COPY *.py ./
-ENTRYPOINT ["python3","main.py"]
+ENTRYPOINT ["python3","-u","main.py"]
