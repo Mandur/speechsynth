@@ -24,7 +24,6 @@ def send_confirmation_callback(message, result, send_context):
     print('Confirmation for message [%d] received with result %s' % (send_context, result))
 
 class Sender(object):
-
     def __init__(self, connection_string, certificate_path=False,
                  protocol=PROTOCOL):
         self.client_protocol = protocol

@@ -28,9 +28,11 @@ def main():
         time.sleep(1)
         print("finished sleeping")
 
-def on_message_received(message):
-    print(message.getString())
-    do_speech_synth( message.getString())
+def on_message_received(message,usercontext):
+    print("I received a message")
+    message_buffer = message.get_bytearray()
+    print(message_buffer)
+    do_speech_synth( message_buffer)
 
 
 main()
