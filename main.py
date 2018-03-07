@@ -22,7 +22,10 @@ def main():
     sender = Sender(CONNECTION_STRING, CA_CERTIFICATE)
     print("connected to "+CONNECTION_STRING)
     do_speech_synth("Synthethizer online")
-    sender.receive_message(on_message_received,'receive')
+    while True:
+        sender.receive_message(on_message_received,'receive')
+   
+        
 
 def on_message_received(message):
     print(message.getString())
