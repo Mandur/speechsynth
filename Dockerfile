@@ -7,6 +7,6 @@ RUN apt-get -y install python3-pip libttspico-utils espeak
 RUN apt-get -y install software-properties-common python-software-properties
 RUN apt-get -y install alsa-utils
 RUN sudo pip3 install pyttsx3
-WORKDIR /azure-iot-sdk-python/device/samples
+WORKDIR /   
 COPY *.py ./
 ENTRYPOINT ["python3","-u","main.py"]
